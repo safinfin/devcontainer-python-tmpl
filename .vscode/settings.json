@@ -1,0 +1,43 @@
+{
+  "editor.formatOnSave": true,
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "python.defaultInterpreterPath": "/usr/local/bin/python",
+  "python.languageServer": "Pylance",
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/usr/local/bin/black",
+  "python.formatting.blackArgs": [
+    "--config=${workspaceFolder}/app/pyproject.toml"
+  ],
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "/usr/local/bin/pflake8",
+  "python.linting.flake8Args": [
+    "--config=${workspaceFolder}/app/pyproject.toml"
+  ],
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintPath": "/usr/local/bin/pylint",
+  "python.linting.pylintArgs": [
+    "--config=${workspaceFolder}/app/pyproject.toml"
+  ],
+  "python.linting.pydocstyleEnabled": true,
+  "python.linting.pydocstylePath": "/usr/local/bin/pydocstyle",
+  "python.linting.pydocstyleArgs": [
+    "--config=${workspaceFolder}/app/pyproject.toml"
+  ],
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestPath": "/usr/local/bin/pytest",
+  "python.testing.pytestArgs": [
+    "--config=${workspaceFolder}/app/pyproject.toml"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "./tests",
+    "-p",
+    "test_*.py"
+  ],
+  "python.analysis.typeCheckingMode": "basic",
+  "autoDocstring.docstringFormat": "google"
+}

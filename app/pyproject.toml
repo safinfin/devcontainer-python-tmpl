@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["Akihiro Kaji <safinfingg@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+pylint = "^2.17.4"
+pyright = "^1.1.318"
+pytest = "^7.4.0"
+pydocstyle = "^6.3.0"
+pyproject-flake8 = "^6.0.0.post1"
+
+[tool.black]
+line-length = 120
+
+[tool.flake8]
+max-line-length = 120
+
+[tool.pylint]
+max-line-length = 120
+
+[tool.pydocstyle]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
