@@ -17,17 +17,18 @@ RUN groupadd --gid ${USER_GID} ${USERNAME} && \
     less \
     sudo \
     unzip && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* && \
     echo ${USERNAME} ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${USERNAME} && \
-    chmod 0440 /etc/sudoers.d/${USERNAME}
+    chmod 0440 /etc/sudoers.d/${USERNAME} && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace
 
-COPY ./app/pyproject.toml ./
+COPY ./pyproject.toml ./
 
 RUN curl -sSL https://install.python-poetry.org | python3 - && \
     poetry config virtualenvs.create false && \
+    poetry config virtualenvs.in-project false && \
     poetry install
 
 USER ${USERNAME}
