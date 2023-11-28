@@ -3,4 +3,4 @@ prepare: build-image
 
 .PHONY: build-image
 build-image:
-	docker build -t repo-name:latest -f docker/Dockerfile .
+	docker build -t github.com/safinfin/devcontainer-python-tmpl:latest -f docker/Dockerfile .

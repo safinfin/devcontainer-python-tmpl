@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "app-name"
+name = "devcontainer-python-tmpl"
 version = "0.0.1"
 description = ""
 authors = ["Akihiro Kaji <safinfingg@gmail.com>"]

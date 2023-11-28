@@ -1,6 +1,6 @@
 services:
-  app-name:
-    image: repo-name:latest
+  app:
+    image: github.com/safinfin/devcontainer-python-tmpl:latest
     volumes:
       - ..:/workspace:cached
     command: sleep infinity
