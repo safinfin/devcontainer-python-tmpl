@@ -1,11 +1,29 @@
 {
   "editor.formatOnSave": true,
-  "terminal.integrated.defaultProfile.linux": "bash",
-  "python.defaultInterpreterPath": "/usr/local/bin/python",
+  "python.defaultInterpreterPath": ".venv/bin/python",
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
   },
-  "python.formatting.provider": "none"
+  "black-formatter.args": [
+    "-l",
+    "99",
+  ],
+  "isort.args": [
+    "--profile",
+    "black",
+    "-l",
+    "99",
+    "--tc",
+    "-m",
+    "3"
+  ],
+  "pylint.args": [
+    "--max-line-length",
+    "120"
+  ]
 }
